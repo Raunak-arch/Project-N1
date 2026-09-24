@@ -1,0 +1,49 @@
+CERN OPEN HARDWARE LICENCE VERSION 2 – STRONGLY RECIPROCAL
+
+1 Definitions
+
+  Licence: this document.
+  Licensor: each person who distributes the Work under the Licence.
+  Electronic Design Automation (EDA) Tool: a software tool used for the design of hardware.
+  Component: a physical part that is used in the construction of a device.
+  Product: any device, apparatus or product, other than the Work, made by using the Work or Modified Work.
+  Source: information such as design materials, documentation, and EDA files, preferred for making modifications to the Work.
+  You: a person who exercises rights under the Licence.
+  The Work: the hardware design, including Source, that is distributed under the Licence.
+  Modified Work: the Work or part of it that you modify.
+
+2 Grant
+
+  The Licensor grants you a worldwide, royalty-free, irrevocable licence to do the following:
+    a. Make, use, modify, and distribute the Work, Modified Works, and Products, under the terms of this Licence.
+    b. Sublicence the rights granted under section 2a only to the extent necessary to distribute Products.
+
+3 Conditions
+
+  3.1 If you distribute the Work or a Modified Work:
+    a. You must include a copy of the Licence in every distribution of the Work, Modified Work, and Products.
+    b. You must prominently include notices stating that you have copied and modified the Work, and the date and details of such modifications.
+    c. If you distribute a Modified Work,
+        i. the Modified Work must be distributed as whole, including corresponding Source, under this Licence;
+        ii. you must retain notices in the Source, identifying the authors of the Work and any modifications you make.
+
+  3.2 If you make Products using the Work or a Modified Work, and distribute them, you must ensure that, if reasonably possible, each recipient of such Products is provided with information on how to obtain the Source for the Work and Modified Work under this Licence.
+
+  3.3 If you distribute Source, you may charge any fee or no fee.
+
+4 Patent Licensing
+
+  The Licensor grants you a licence to patents held by the Licensor that are necessary to make use, sell, and distribute the Work and Modified Works.
+  You must ensure that any Modified Work you distribute is under terms that do not impose further patent restrictions to those granted under this Licence.
+
+5 Disclaimer and Liability
+
+  THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, SATISFACTORY QUALITY, AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DAMAGES, WHETHER IN CONTRACT, TORT, OR OTHERWISE, ARISING FROM OR IN CONNECTION WITH THE WORK OR MODIFIED WORK.
+
+6 General
+
+  6.1 If provisions of this Licence are or become invalid, that shall not affect the validity of the remaining provisions.
+  6.2 The Licence shall not be enforceable except by the Licensor and by any person to whom the rights have been expressly transferred.
+
+A machine-readable copy and more information is available at:
+https://ohwr.org/project/cernohl/wikis/CERN-OHL-version-2

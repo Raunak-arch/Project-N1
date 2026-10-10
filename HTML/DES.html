@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Report - Design</title>
+
+<!-- SCI-FI & JETBRAINS FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 10pt;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* HEADING 1 (AUDIOWIDE) */
+  .h1-text {
+    font-family: 'Audiowide', cursive;
+    font-size: 16pt;
+    color: #111827;
+    letter-spacing: 1.5px;
+    margin: 28px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e5e7eb;
+    text-transform: uppercase;
+  }
+
+  /* HEADING 2 (CHAKRA PETCH) */
+  .h2-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: 0.8px;
+    margin: 22px 0 10px 0;
+  }
+
+  /* MAIN BODY TEXT */
+  p.main-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 10pt;
+    color: #374151;
+    line-height: 1.65;
+    margin: 0 0 14px 0;
+  }
+
+  /* TEXT-ONLY COLOR CLASSES (NO BOXES/BACKGROUNDS) */
+  .code-soil {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: #ca8a04; /* Brighter, vibrant yellow-gold */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .code-cyan {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: #0891b2; /* Cyan */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .code-blue {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: #2563eb; /* Blue */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .code-red {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: #dc2626; /* Red */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="h1-text">3. DESIGN</div>
+
+  <div class="h2-text">3.1 SYSTEM ARCHITECTURE</div>
+  <p class="main-text">
+    The architecture of the Exoplanet Data Analysis and Visualization System follows a multi-tier pipeline model that links external data repositories, a local database management system, and an interactive data exploration interface. The workflow is structured into four core layers:
+  </p>
+  <ul style="font-family: 'Exo 2', sans-serif; font-size: 10pt; color: #374151; line-height: 1.65; margin: 0 0 14px 0; padding-left: 20px;">
+    <li style="margin-bottom: 8px;"><strong>Data Source Layer:</strong> Retrieves raw tabular astrophysical datasets via REST API endpoints from the NASA Exoplanet Archive and stores them locally as comma-separated values (CSV).</li>
+    <li style="margin-bottom: 8px;"><strong>Preprocessing & Ingestion Layer:</strong> Utilizes Python's Pandas library to handle missing records (filling null entries with <span class="code-red">'Unknown'</span>) and maps the DataFrame structure directly into a relational MySQL database (<span class="code-cyan">Analysis</span> database, <span class="code-cyan">PlanetData</span> table) via SQLAlchemy.</li>
+    <li style="margin-bottom: 8px;"><strong>Query & Processing Layer:</strong> Interactively prompts the user to select specific X and Y astrophysical parameters. Executes parameterized SQL queries that filter out incomplete records (<span class="code-blue">WHERE X != </span><span class="code-red">'Unknown'</span><span class="code-blue"> AND Y != </span><span class="code-red">'Unknown'</span>) to maintain statistical accuracy.</li>
+    <li style="margin-bottom: 8px;"><strong>Visualization Layer:</strong> Leverages Matplotlib to render log-scale scatter plots, translating raw numerical databases into intuitive visual graphs that reveal cosmic trends and outliers.</li>
+  </ul>
+
+  <div class="h2-text">3.2 DATABASE SCHEMA & ATTRIBUTE SPECIFICATIONS</div>
+  <p class="main-text">
+    The relational database table <span class="code-cyan">PlanetData</span> stores a comprehensive multi-parameter astrophysical dataset ingested from the NASA Exoplanet Archive. To maintain data integrity and support complex exploratory data analysis (EDA), the schema is structured into distinct functional categories of attributes:
+  </p>
+
+  <ul style="font-family: 'Exo 2', sans-serif; font-size: 10pt; color: #374151; line-height: 1.65; margin: 0 0 14px 0; padding-left: 20px;">
+    <li style="margin-bottom: 8px;"><strong>Planetary Characteristics:</strong> Attributes defining physical and orbital traits of the exoplanet, including orbital period (<span class="code-soil">pl_orbper</span>), semi-major axis (<span class="code-soil">pl_orbsmax</span>), radius in Earth/Jupiter units (<span class="code-soil">pl_rade</span>, <span class="code-soil">pl_radj</span>), mass equivalents (<span class="code-soil">pl_bmasse</span>, <span class="code-soil">pl_bmassj</span>), orbital eccentricity (<span class="code-soil">pl_orbeccen</span>), equilibrium temperature (<span class="code-soil">pl_eqt</span>), and insolation flux (<span class="code-soil">pl_insol</span>).</li>
+    <li style="margin-bottom: 8px;"><strong>Stellar Parameters:</strong> Attributes characterizing the parent host star, such as effective surface temperature (<span class="code-soil">st_teff</span>), radius (<span class="code-soil">st_rad</span>), mass (<span class="code-soil">st_mass</span>), metallicity (<span class="code-soil">st_met</span>), and surface gravity log(g) (<span class="code-soil">st_logg</span>).</li>
+    <li style="margin-bottom: 8px;"><strong>Discovery & System Metadata:</strong> Identifiers and contextual metadata recording the planet name (<span class="code-soil">pl_name</span>), host star name (<span class="code-soil">hostname</span>), discovery methodology (<span class="code-soil">discoverymethod</span>), discovery year (<span class="code-soil">disc_year</span>), planet count (<span class="code-soil">sy_pnum</span>), stellar count (<span class="code-soil">sy_snum</span>), system distance (<span class="code-soil">sy_dist</span>), and visual magnitude (<span class="code-soil">sy_vmag</span>).</li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Report - Requirements</title>
+
+<!-- 1. SCI-FI & JETBRAINS FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 13pt;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* HEADING 1 (AUDIOWIDE) */
+  .h1-text {
+    font-family: 'Audiowide', cursive;
+    font-size: 16pt;
+    color: #111827;
+    letter-spacing: 1.5px;
+    margin: 28px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e5e7eb;
+    text-transform: uppercase;
+  }
+
+  /* HEADING 2 (CHAKRA PETCH) */
+  .h2-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 13.5pt;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: 0.8px;
+    margin: 22px 0 10px 0;
+  }
+
+  /* MAIN BODY TEXT / LIST ITEMS (13PT) */
+  ul.req-list {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 13pt;
+    color: #374151;
+    line-height: 1.65;
+    margin: 0 0 14px 0;
+    padding-left: 20px;
+  }
+
+  ul.req-list li {
+    margin-bottom: 10px;
+  }
+
+  /* PLAIN URL STYLE (NO BACKGROUND BOX, 10.5PT, NEUTRAL GREY) */
+  .url-text {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5pt;
+    color: #4b5563;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    margin-top: 4px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <div class="h1-text">2. REQUIREMENTS</div>
+
+  <div class="h2-text">2.1 TECHNOLOGY USED</div>
+  <ul class="req-list">
+    <li><strong>Programming Language:</strong> Python 3.9+</li>
+    <li><strong>Libraries:</strong> Pandas, Matplotlib, SQLAlchemy, PyMySQL</li>
+    <li><strong>Database Management System:</strong> MySQL Server</li>
+    <li><strong>Data Handling:</strong> NASA Exoplanet CSV data files & dynamic SQL queries</li>
+    <li><strong>Visualization:</strong> Log-scale scatter plots</li>
+  </ul>
+
+  <div class="h2-text">2.2 SOFTWARE REQUIREMENTS</div>
+  <ul class="req-list">
+    <li>Python 3.9 or above environment installed</li>
+    <li>MySQL Server and MySQL Workbench (for database management)</li>
+    <li>Python IDE (e.g., IDLE or VS Code)</li>
+    <li>Required Python packages installed via pip (<code>pandas</code>, <code>matplotlib</code>, <code>sqlalchemy</code>, <code>pymysql</code>)</li>
+    <li>
+      NASA Exoplanet Archive Dataset Source URL:<br>
+      <span class="url-text">https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,discoverymethod,disc_year,sy_pnum,sy_snum,pl_orbper,pl_orbsmax,pl_rade,pl_radj,pl_bmasse,pl_bmassj,pl_orbeccen,pl_eqt,pl_insol,st_teff,st_rad,st_mass,st_met,st_logg,sy_dist,sy_vmag+from+pscomppars&format=csv</span>
+    </li>
+  </ul>
+
+</body>
+</html>

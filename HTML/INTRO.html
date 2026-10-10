@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Report - Introduction</title>
+
+<!-- 1. SCI-FI & JETBRAINS FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 11pt;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* HEADING 1 (AUDIOWIDE) */
+  .h1-text {
+    font-family: 'Audiowide', cursive;
+    font-size: 16pt;
+    color: #111827;
+    letter-spacing: 1.5px;
+    margin: 28px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e5e7eb;
+    text-transform: uppercase;
+  }
+
+  /* HEADING 2 (CHAKRA PETCH) */
+  .h2-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: 0.8px;
+    margin: 22px 0 10px 0;
+  }
+
+  /* MAIN BODY TEXT */
+  p.main-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 11pt;
+    color: #374151;
+    line-height: 1.65;
+    margin: 0 0 14px 0;
+  }
+
+  /* TEXT-ONLY COLOR CLASSES (NO BOXES/BACKGROUNDS) */
+  .code-soil {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10pt;
+    color: #ca8a04; /* Bright Soil Yellow / Ochre */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .code-cyan {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10pt;
+    color: #0891b2; /* Cyan for DB & Table names */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .code-blue {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10pt;
+    color: #2563eb; /* Blue */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .code-red {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10pt;
+    color: #dc2626; /* Red for string literals */
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <div class="h1-text">1. INTRODUCTION</div>
+
+  <p class="main-text">
+    In recent years, modern astronomy has entered a data-driven era, with space agencies discovering thousands of planets orbiting distant stars (exoplanets). Managing, storing, and analyzing these massive datasets requires efficient database management systems and powerful programming tools.
+    Plotting graph, furthermore visually allows one to see the deviations from expected trends, which ultimately is responsible for discovery of hidden factors in Astronomy.
+    This project bridges Python programming with a MySQL relational database (<span class="code-cyan">Analysis</span> database). Using libraries such as Pandas for data manipulation, SQLAlchemy/PyMySQL for Python-SQL connectivity, and Matplotlib for graphical visualization, this application allows users to interactively analyze relationships between various stellar and planetary characteristics—such as orbital periods (<span class="code-soil">pl_orbper</span>), planetary masses (<span class="code-soil">pl_bmasse</span>), radii (<span class="code-soil">pl_rade</span>), and stellar temperatures (<span class="code-soil">st_teff</span>).
+  </p>
+  
+  <div class="h2-text">1.1 AIM</div>
+  <p class="main-text">
+    To perform exploratory data analysis (EDA) on exoplanet datasets by integrating Python with a MySQL database (<span class="code-cyan">Analysis</span> / <span class="code-cyan">PlanetData</span>), enabling the extraction, processing, and statistical visualization of astrophysical trends, anomalies, and population distributions while omitting incomplete records (<span class="code-blue">WHERE X != </span><span class="code-red">'Unknown'</span>).
+  </p>
+  
+  <div class="h2-text">1.2 OBJECTIVES</div>
+  <ul style="font-family: 'Exo 2', sans-serif; font-size: 11pt; color: #374151; line-height: 1.65; margin: 0 0 14px 0; padding-left: 20px;">
+    <li style="margin-bottom: 8px;"><strong>Data Acquisition and Preprocessing:</strong> To download structural exoplanet datasets from the NASA Exoplanet Archive and utilize Pandas to clean, handle missing values (filling null entries with <span class="code-red">'Unknown'</span>), and prepare the dataset for database insertion.</li>
+    <li style="margin-bottom: 8px;"><strong>Relational Database Creation:</strong> To establish a structured MySQL database named <span class="code-cyan">Analysis</span> and configure a dedicated table (<span class="code-cyan">PlanetData</span>) to persistently store large-scale astrophysical records.</li>
+    <li style="margin-bottom: 8px;"><strong>Python-SQL Connectivity:</strong> To implement a robust backend connection between the Python environment and the local MySQL server using SQLAlchemy and PyMySQL for seamless data storage and retrieval.</li>
+    <li style="margin-bottom: 8px;"><strong>Exploratory Data Analysis (EDA) & Dynamic Querying:</strong> To execute custom SQL queries that filter out incomplete data (<span class="code-blue">WHERE X != </span><span class="code-red">'Unknown'</span><span class="code-blue"> AND Y != </span><span class="code-red">'Unknown'</span>) and fetch specific user-defined variables for comparative analysis.</li>
+    <li style="margin-bottom: 8px;"><strong>Scientific Data Visualization:</strong> To generate log-scale scatter plots using Matplotlib, enabling the visual identification of astrophysical trends, correlations, and cosmic anomalies (such as the Neptunian Desert and ultra-low-density planets).</li>
+  </ul>
+
+</body>
+</html>

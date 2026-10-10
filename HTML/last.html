@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Report - Exoplanet Analysis</title>
+
+<!-- 1. SCI-FI & JETBRAINS FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- 2. AUTOMATIC GITHUB LIGHT SYNTAX HIGHLIGHTER -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    hljs.highlightAll();
+  });
+</script>
+
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 10pt;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* HEADING 1 (AUDIOWIDE) */
+  .h1-text {
+    font-family: 'Audiowide', cursive;
+    font-size: 16pt;
+    color: #111827;
+    letter-spacing: 1.5px;
+    margin: 28px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e5e7eb;
+    text-transform: uppercase;
+  }
+
+  /* HEADING 2 (CHAKRA PETCH) */
+  .h2-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: 0.8px;
+    margin: 22px 0 10px 0;
+  }
+
+  /* MAIN BODY TEXT */
+  p.main-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 12pt;
+    color: #374151;
+    line-height: 1.65;
+    margin: 0 0 14px 0;
+  }
+
+  /* CODE BOX CONTAINER */
+  .code-box {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0 20px 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .code-lang {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+
+  .code-box pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+
+  .code-box code.hljs {
+    background: transparent !important;
+    padding: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 9.5pt !important;
+    line-height: 1.6 !important;
+    white-space: pre-wrap;
+    word-break: break-word;
+    tab-size: 4;
+  }
+
+  /* BIBLIOGRAPHY STYLING */
+  .bib-item {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    text-indent: -24px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  
+
+  <!-- ================= SECTION 4: CONCLUSION ================= -->
+  <div class="page-break"></div>
+
+  <div class="h1-text">6. CONCLUSION</div>
+
+  <p class="main-text">
+    If we look at how the space industry found things like the "Neptunian Desert" or cotton-candy super-puffs, they didn't spot them just by looking through a telescope lens. They found them using data visualization and statistical correlation. When astronomers mapped orbital periods against planet sizes, the scatter plots literally showed a blank space where intermediate planets get vaporized by stellar radiation, along with weird outlier planets that floated way above normal density trends.
+  </p>
+
+  <p class="main-text">
+    At the same time, working on this made it pretty clear where traditional plotting hits a wall. Sure, a scatter plot is awesome for a quick visual, but it can only show a couple of variables at a time. If we are dealing with thousands of messy, multi-parameter telescope logs, human-made graphs and basic correlation checks will eventually miss subtle patterns hidden deep in the noise.
+  </p>
+
+  <p class="main-text">
+    That is exactly why the space sector relies heavily on deep learning and neural networks today. Modern AI models can sift through millions of data points and spot faint, multi-dimensional signals that standard correlation graphs would completely overlook. Writing scripts and generating scatter plots is a great foundation, but AI is ultimately what’s driving modern space discovery forward.
+  </p>
+
+  <!-- ================= SECTION 5: BIBLIOGRAPHY ================= -->
+
+  <div class="h1-text">7. BIBLIOGRAPHY</div>
+
+  <p class="main-text">
+    The following academic resources, official documentation repositories, and literature formed the theoretical and technical foundation of this project:
+  </p>
+
+  <div class="bib-item">
+    [1] Akeson, R. L., et al. (2013). <i>The NASA Exoplanet Archive: Data And Publication Services</i>. Publications of the Astronomical Society of the Pacific, 125(930), 989.
+  </div>
+
+  <div class="bib-item">
+    [2] <i>Informatics Practices(Textbook, NCERT) - Class XII</i>. 
+  </div>
+
+  <div class="bib-item">
+    [3] Python Software Foundation. (2026). <i>Python 3.9+ Standard Library & SQLAlchemy Core Documentation</i>. from websites https://docs.python.org / https://www.sqlalchemy.org/
+  </div>
+
+</body>
+</html>

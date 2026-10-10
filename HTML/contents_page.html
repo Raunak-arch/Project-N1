@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Table of Contents</title>
+<style>
+  /* 1. LOAD SCI-FI FONTS */
+  @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,500;0,600&display=swap');
+
+  @page {
+    size: A4;
+    margin: 20mm 20mm;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* MAIN TITLE: CONTENTS (HEADING 1 // AUDIOWIDE) */
+  .toc-title {
+    font-family: 'Audiowide', cursive;
+    font-size: 20pt;
+    color: #0f172a;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 10px 0 45px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  /* MAIN TOPIC SECTION (HEADING 2 // CHAKRA PETCH) */
+  .toc-section {
+    margin-bottom: 26px;
+  }
+
+  .toc-topic {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+  }
+
+  /* SUBTOPICS LIST (MAIN BODY FONT // EXO 2) */
+  .toc-subtopics {
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .toc-subtopic {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 11pt;
+    color: #334155;
+    letter-spacing: 0.3px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="toc-page">
+    <!-- TITLE (HEADING 1 FONT: AUDIOWIDE) -->
+    <div class="toc-title">CONTENTS</div>
+
+    <!-- 1. INTRODUCTION -->
+    <div class="toc-section">
+      <div class="toc-topic">1. Introduction</div>
+      <div class="toc-subtopics">
+        <div class="toc-subtopic">1.1 Aim</div>
+        <div class="toc-subtopic">1.2 Objective</div>
+      </div>
+    </div>
+
+    <!-- 2. REQUIREMENTS -->
+    <div class="toc-section">
+      <div class="toc-topic">2. Requirement </div>
+      <div class="toc-subtopics">
+        <div class="toc-subtopic">2.1 Technologies Used</div>
+        <div class="toc-subtopic">2.2 Software Requirement</div>
+      </div>
+    </div>
+
+    <!-- 3. DESIGN -->
+    <div class="toc-section">
+      <div class="toc-topic">3. Design</div>
+      <div class="toc-subtopics">
+        <div class="toc-subtopic">3.1 System Architecture</div>
+        <div class="toc-subtopic">3.2 Database Schema & Attribute Specifications</div>
+        <div class="toc-subtopic">3.3 Output</div>
+      </div>
+    </div>
+
+    <!-- 4. CODING -->
+    <div class="toc-section">
+      <div class="toc-topic">4. Coding</div>
+      <div class="toc-subtopics">
+        <div class="toc-subtopic">4.1  Database Initialization</div>
+        <div class="toc-subtopic">4.2 Data Ingestion and Pipeline Setup</div>
+        <div class="toc-subtopic">4.3 Interactive Visualization</div>
+      </div>
+    </div>
+
+    <!-- 5. Analysis and Result -->
+    <div class="toc-section">
+      <div class="toc-topic">5. Analysis and Results</div>
+      <div class="toc-subtopics">
+        <div class="toc-subtopic">5.1 Case I - Mass vs Radius</div>
+        <div class="toc-subtopic">5.2 Case II- Methodological limitation and historical bias</div>
+        <div class="toc-subtopic">5.3 Execution and Output</div>
+      </div>
+    </div>
+
+    <!-- 6. CONCLUSION -->
+    <div class="toc-section">
+      <div class="toc-topic">6. Conclusion</div>
+    </div>
+
+    <!-- 7. BIBLIOGRAPHY -->
+    <div class="toc-section">
+      <div class="toc-topic">7. Bibliography</div>
+    </div>
+  </div>
+
+</body>
+</html>

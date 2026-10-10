@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Report - Analysis and Results</title>
+
+<!-- 1. SCI-FI & JETBRAINS FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 13pt;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* HEADING 1 (AUDIOWIDE) */
+  .h1-text {
+    font-family: 'Audiowide', cursive;
+    font-size: 16pt;
+    color: #111827;
+    letter-spacing: 1.5px;
+    margin: 28px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e5e7eb;
+    text-transform: uppercase;
+  }
+
+  /* HEADING 2 (CHAKRA PETCH) */
+  .h2-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 13.5pt;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: 0.8px;
+    margin: 22px 0 10px 0;
+  }
+
+  /* MAIN BODY TEXT */
+  p.main-text {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 13pt;
+    color: #374151;
+    line-height: 1.65;
+    margin: 0 0 14px 0;
+  }
+
+  /* PRINT-FRIENDLY IMAGE CONTAINER */
+  .img-container {
+    text-align: center;
+    margin: 18px 0;
+    page-break-inside: avoid;
+  }
+
+  .report-img {
+    max-width: 85%;
+    height: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .img-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10pt;
+    color: #4b5563;
+    margin-top: 6px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <div class="h1-text">5. ANALYSIS AND RESULTS</div>
+
+  <p class="main-text">
+    Upon integrating the NASA dataset into MySQL and establishing connectivity through Python, interactive exploratory data analysis scripts were executed. By passing custom parameters into dynamic SQL queries—while systematically filtering out missing entries—distinct log-scale graphical visualizations were generated to analyze underlying astrophysical trends.
+  </p>
+
+  <div class="h2-text">5.1 CASE 1: PLANETARY MASS VERSUS RADIUS ANALYSIS</div>
+  <p class="main-text">
+    For the first case, planet mass (<span style="font-family: 'JetBrains Mono'; color: #ca8a04; font-size: 11.5pt;">pl_bmasse</span>) was plotted against planet radius (<span style="font-family: 'JetBrains Mono'; color: #ca8a04; font-size: 11.5pt;">pl_rade</span>) on a log-log scale. This visualization maps out how planetary composition changes across different scales. Rocky planets exhibit a steady, predictable increase in radius as their mass grows. However, once the gas giant threshold is reached, the trend flattens out because immense gravitational self-compression squeezes the gas molecules tightly together.
+  </p>
+
+  <div class="img-container">
+    <img src="Figure_1.png" alt="Planetary Mass vs Radius Analysis" class="report-img">
+    <div class="img-caption">Figure 1: Log-scale scatter plot of Planetary Mass vs Radius (pl_bmasse vs pl_rade)</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <div class="h2-text">5.2 CASE 2: METHODOLOGICAL LIMITATIONS & HISTORICAL BIAS</div>
+  <p class="main-text">
+    For the second case, an evaluation of discovery parameters was conducted to test data correlation. While a distinct statistical correlation emerges when plotting historical survey metrics, analysis reveals an inherent methodological limitation: blindly brute-forcing correlations across variables does not uncover new astrophysical physics. Instead, the hidden factor driving the pattern is human technological development and instrument evolution—demonstrating how modern space-based telescopes uncovered populations of small planets that older ground-based instruments missed.
+  </p>
+
+  <div class="img-container">
+    <img src="Figure_2.png" alt="Historical Trends & Telescope Evolution" class="report-img">
+    <div class="img-caption">Figure 2: Historical distribution reflecting human technological advancement rather than new physics</div>
+  </div>
+  <div class="page-break"></div>
+  <div class="h2-text">5.3 EXECUTION & OUTPUT</div>
+  <p class="main-text">
+    The backend pipeline successfully established database connectivity, handled null values by mapping them cleanly, and executed dynamic queries without execution errors. The terminal output verifying successful data retrieval and record counts is captured below.
+  </p>
+
+  <div class="img-container">
+    <img src="S.png" alt="Terminal Execution Output" class="report-img">
+    <div class="img-caption">Figure 3: Output (S.png)</div>
+  </div>
+
+</body>
+</html>
